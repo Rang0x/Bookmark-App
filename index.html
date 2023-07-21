@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarks!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/fontawesome/all.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section class="home">
+        <div class="container w-75 bg-primary-subtle rounded-4 my-5 ">
+            <div class="caption text-center py-5">
+                <h1 class="m-auto d-inline">Bookmarker</h1>
+                <hr>
+                <h3 class=""> Bookmark your favorite sites </h3>
+            </div>
+            <div class="form px-3">
+                <i class="fa-solid fa-book"></i>
+                <label for="bNameId">Site Name</label>
+                <input id="bNameId" class="form-control mt-2 mb-3" type="text" placeholder="Bookmark Name">
+                <i class="fa-solid fa-link"></i>
+                <label for="bUrlId">Site URL</label>
+                <input id="bUrlId" class="form-control my-2" type="text" placeholder="Website URL">
+                <button id="submitBtn" onclick="addbMark()" class="btn btn-danger m-auto">Submit</button>
+                <button id="updateBtn" onclick="updatebMark()" class="btn btn-warning m-auto">Update</button>
+            </div>
+            <hr>
+            <table class="table my-5 d-none">
+                <thead class="tableHead">
+                    <tr class="text-center">
+                        <th>Index</th>
+                        <th>Website Name</th>
+                        <th>Visit</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody class="text-center" id="tBodyId">
+                </tbody>
+            </table>
+        </div>
+        <dialog class="w-25">
+            <div class="d-flex flex-row gap-2">
+                <i class="fa-solid fa-circle text-danger"></i>
+                <i class="fa-solid fa-circle text-warning"></i>
+                <i class="fa-solid fa-circle text-success"></i>  
+                <i id="closeDialog" class="fa-solid fa-close ms-auto fs-3"></i>
+            </div>
+            <h2 class="fs-5 mb-2">Site Name or Url is not valid, Please follow the rules below :</h2>
+            <h5>
+                <span>
+                    <i class="fa-solid fa-arrow-circle-right"></i>
+                </span>
+                Site name must contain at least 3 characters
+            </h5>
+            <h5>
+                <span>
+                    <i class="fa-solid fa-arrow-circle-right"></i>
+                </span>
+                Site URL must be a valid one
+            </h5>
+            <div class="ps-4">
+                <h5>- It must start with ( https:// or &#160&#160&#160&#160&#160&#160&#160&#160 http://)</h5>
+                <h5>- Then domain name</h5>
+                <p>Example : https://www.google.com</p>
+            </div>
+        </dialog>
+    </section>
+    <script src="js/index.js"></script>
+</body>
+</html>
